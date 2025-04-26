@@ -127,3 +127,7 @@ func upnp_setup() -> void:
 
 func _on_name_focus_entered() -> void:
 	$Menu/MainMenu/MarginContainer/VBoxContainer/name.virtual_keyboard_enabled = true
+
+
+func _on_button_pressed() -> void:
+	DisplayServer.clipboard_set(IP.get_local_addresses()[len(IP.get_local_addresses()) - 1])
